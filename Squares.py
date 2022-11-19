@@ -10,21 +10,22 @@ def drawSquare(t,sz):
         t.forward(sz)
         t.left(90)
 
-wn = turtle.Screen()
+def main():    
+    wn = turtle.Screen()
+    t = turtle.Turtle()
+    t.color("blue")
 
-t = turtle.Turtle()
-t.color("blue")
+    size = 20
+    
+    for i in range(5):
+        drawSquare(t,size)
+        size = size + 20
+        t.penup()
+        t.goto(t.pos() + (-10, -10))
+        t.pendown()
+    wn.mainloop()
 
-size = 20
-for i in range(5):
-   drawSquare(t,size)
-   size = size + 20
-   t.penup()
-   t.goto(t.pos() + (-10, -10))
-   t.pendown()
-
-wn.mainloop()
-
+ main()
 
 
 
