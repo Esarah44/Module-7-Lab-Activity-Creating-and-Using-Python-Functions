@@ -5,17 +5,33 @@
 
 import random
 
-z=0
+#z=0
 
+#This function only works for checking the passed number is in range or not
 def CheckRange(number):
-    c=0
-    if y >= 1 and y <= 10:
-        c=1
-    return c
+    #c=0
+    #if y >= 1 and y <= 10:
+    #    c=1
+    if number in range(1, 10):
+        return True
+    else:
+        return False
 
-for i in range(1,20):
-    y = random.randrange(1,15)
-    z = z + CheckRange(y)
+    #return c
 
-print (z)
+#use main function to test CheckRange function.
+def main():
+    count = 0
+    for i in range(20):
+        y = random.randrange(1,15)
+        if CheckRange(y):  #if the function returns True, then increase he count by 1.
+            count += 1
+        else:
+            pass
+    print("The number is in range for {} times.".format(count))
+    
+main()
+ #   z = z + CheckRange(y)
+
+#print (z)
 
